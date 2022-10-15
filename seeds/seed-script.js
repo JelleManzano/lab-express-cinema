@@ -1,8 +1,8 @@
 const moviesArr = require("./movie.seed.json")
 
-require("../db/index")
+require("../db/index.js")
 
-const Movies = require("../models/Movie.model")
+const Movies = require("../models/Movie.model.js")
 
 Movies.insertMany(moviesArr)
 .then(() => {
