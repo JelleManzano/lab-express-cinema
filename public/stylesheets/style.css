@@ -30,3 +30,10 @@ a {
   margin-left: 58%;
   font-size: 18px;
 }
+
+#movie-list {
+  width: 28%;
+  margin: 30px;
+  padding-bottom: 25px;
+  text-align: center;
+}

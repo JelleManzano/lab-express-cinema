@@ -15,4 +15,17 @@ router.get("/movies", (req,res) => {
     })
 })
 
+router.get("/movies/:details", (req, res, next) => {
+    const {details} = req.params
+    Movies.findOne({"_id": details})
+    .then((response)=>{
+        res.render("movie-details.hbs", {
+            details: response
+        })
+    })
+    .catch((err) => {
+        next(err)
+    })
+})
+
 module.exports = router;
